@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.relative:hover .trash-btn {
+    display: block;
+}
+
+.trash-btn {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+ 
+  ::-webkit-scrollbar-track {
+    background: #e2e2e2;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #F2BB05;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fbcd37;
+  }
+
+  .multiselect__tag-icon::after {
+    font-size: 12px;
+  color: black;
+}
+
+.multiselect__tag {
+    background: #F2BB05;
+    font-weight: 500;
+}
+
+.multiselect__tags {
+  min-height: 40px;
+  display: block;
+  padding: 8px 40px 0 8px;
+  border: none;
+  background: none;
+  font-size: 12px;
+}
+
+.multiselect__option--highlight {
+  background: #F2BB05;
+  font-size: 12px;
+}
+
+.multiselect__option--highlight::after {
+  background: #F2BB05;
+  font-size: 12px;
+}
+
+.multiselect,
+.multiselect__input,
+.multiselect__single {
+  min-height: 30px;
+  font-size: 12px;
+}
+
+.multiselect__input,
+.multiselect__single {
+  padding: 0 2px;
+  margin-bottom: 8px;
+}
+
+.multiselect__input::placeholder {
+  color: #97999b;
+}
+
+.multiselect__option--selected {
+  font-weight: 500;
+}
+
+.multiselect__input:focus,
+.multiselect__single:focus {
+  border-color: #F2BB05;
+  outline-color: #F2BB05;
+  box-shadow: none;
+  border-radius: 10px;
+}
+ .badge{
+  --p-tag-padding: 2px 15px;
+ }
+
+/* DataTable Styles */
+.p-datatable {
+    background: white;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+    background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 1rem 1.25rem;
+    font-weight: 500;
+    color: #475569;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.p-datatable .p-datatable-thead > tr > th:hover {
+    background: #e0dfdf;
+    cursor: pointer;
+    color: #000000;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+    background: white;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.p-datatable .p-sortable-column:not(.p-highlight):hover {
+    background: #000000;
+    color: #000000;
+    cursor: pointer;
+}
+
+.p-datatable .p-sortable-column.p-highlight {
+    background: #F8FAFC;
+    color: #475569;
+}
+
+.p-datatable .p-sortable-column.p-highlight:hover {
+    background: #F1F5F9;
+    color: #475569;
+    cursor: pointer;
+}
+
+.p-datatable .p-sortable-column:focus {
+    box-shadow: inset 0 0 0 0.15rem #E2E8F0;
+}
+
+.p-link:focus {
+    box-shadow: none;
+}
+
+.p-button.p-button-text {
+    padding: 0;
+}
+
+.p-button.p-button-text:hover {
+    background: transparent;
+}
+
+.p-button.p-button-text:focus {
+    box-shadow: none;
+}
+
+.p-inputtext {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.p-inputtext::placeholder {
+    color: #9ca3af;
+}
+
+.p-inputtext:focus {
+    box-shadow: 0 0 0 2px #e2e8f0;
+    border-color: #64748b;
+}
+
+.p-paginator {
+    padding: 1rem;
+    font-size: 0.875rem;
+    background: transparent;
+    border: none;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+    min-width: 2rem;
+    height: 2rem;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #E2E8F0;
+    color: #475569;
+}
+
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+    min-width: 2rem;
+    height: 2rem;
+}
+
+.p-menu {
+    padding: 0.5rem 0;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.p-menu .p-menuitem {
+    margin: 0;
+}
+
+.p-menu .p-menuitem-link {
+    padding: 0.5rem 1rem;
+}
+
+.p-menu .p-menuitem-link:hover {
+    background: #F1F5F9;
+}
+
+.p-menu .p-menuitem-link:focus {
+    box-shadow: none;
+}
+
+.p-confirm-dialog .p-dialog-content {
+    padding: 1.5rem;
+}
+
+/* Tab Styles */
+.custom-tabs [role="tablist"] {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1px;
+}
+
+.custom-tabs [role="tab"] {
+    padding: 0.75rem 1rem;
+    color: #6b7280;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.custom-tabs .tab-icon {
+    color: #6b7280;
+    transition: color 0.2s ease;
+}
+
+.custom-tabs [role="tab"][aria-selected="true"] {
+    color: #F5A623;
+}
+
+.custom-tabs [role="tab"][aria-selected="true"]::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #F5A623;
+    border-radius: 2px;
+}
+
+.custom-tabs [role="tab"][aria-selected="true"] .tab-icon {
+    color: #F5A623 !important;
+}
+
+.custom-tabs [role="tab"]:hover {
+    color: #F5A623 !important;
+}
+
+.custom-tabs [role="tab"]:hover .tab-icon {
+    color: #F5A623;
+}
+
+/* Add hover effect for table rows */
+.p-datatable .p-datatable-tbody > tr:hover {
+    background: #F8FAFC;
+}
+
+/* Adjust the row height for better spacing */
+.p-datatable .p-datatable-tbody > tr {
+    height: 4rem;
+}
+
+/* Adjust the table header height */
+.p-datatable .p-datatable-thead > tr {
+    height: 3.5rem;
+}

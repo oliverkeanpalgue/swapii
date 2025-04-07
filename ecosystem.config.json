@@ -1,0 +1,63 @@
+{
+    "apps": [
+    {
+        "name": "barter-npm",
+        "script": "npm",
+        "args": ["run", "dev", "-p", "4173"],
+        "instances": 1,
+	"exec_mode": "fork",
+        "wait_ready": true,
+        "autorestart": true,
+        "max_restarts": 5,
+        "watch": false,
+        "error_file": "log/err-0.log",
+        "out_file": "log/out-0.log",
+        "log_file": "log/combined-0.log",
+        "time": true
+    },
+    {
+        "name": "barter-main",
+        "script": "artisan",
+        "args": ["serve", "--host=127.0.0.1", "--port=8000"],
+        "instances": "1",
+        "wait_ready": true,
+        "autorestart": true,
+        "max_restarts": 5,
+        "interpreter" : "php",
+        "watch": false,
+        "error_file": "log/err-1.log",
+        "out_file": "log/out-1.log",
+        "log_file": "log/combined-1.log",
+        "time": true
+    },
+    {
+        "name": "barter-worker",
+        "script": "artisan",
+        "args": ["queue:work", "--tries=5"],
+        "instances": "1",
+	"wait_ready": true,
+        "autorestart": true,
+        "max_restarts": 5,
+        "interpreter" : "php",
+        "watch": false,
+        "error_file": "log/err-2.log",
+        "out_file": "log/out-2.log",
+        "log_file": "log/combined-2.log",
+        "time": true
+    },
+    {
+        "name": "barter-scheduler",
+        "script": "artisan",
+        "args": ["schedule:work"],
+        "instances": "1",
+	"wait_ready": true,
+        "autorestart": true,
+        "max_restarts": 5,
+        "interpreter" : "php",
+        "watch": false,
+        "error_file": "log/err-3.log",
+        "out_file": "log/out-3.log",
+        "log_file": "log/combined-3.log",
+        "time": true
+    }]
+}
